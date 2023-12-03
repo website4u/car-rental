@@ -1,0 +1,66 @@
+---
+import type { CarRentalItem } from '~/types';
+
+const carRentalItems: CarRentalItem[] = [
+  {
+    id: 1,
+    title: 'Car Model 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imageUrl: 'https://files.porsche.com/filestore/image/multimedia/none/992-gt3-modelexplorer/normal/6bcbc899-51bd-11eb-80d1-005056bbdc38;sP;twebp/porsche-normal.webp',
+    price: '$50/day',
+    brand: 'Porsche',
+  },
+  {
+    id: 2,
+    title: 'Car Model 2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imageUrl: 'https://files.porsche.com/filestore/image/multimedia/none/992-gt3-modelexplorer/normal/6bcbc899-51bd-11eb-80d1-005056bbdc38;sP;twebp/porsche-normal.webp',
+    price: '$60/day',
+    brand: 'Porsche',
+  },
+  {
+    id: 3,
+    title: 'Car Model 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imageUrl: 'https://files.porsche.com/filestore/image/multimedia/none/992-gt3-modelexplorer/normal/6bcbc899-51bd-11eb-80d1-005056bbdc38;sP;twebp/porsche-normal.webp',
+    price: '$50/day',
+    brand: 'Porsche',
+  },
+  {
+    id: 4,
+    title: 'Car Model 2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imageUrl: 'https://files.porsche.com/filestore/image/multimedia/none/992-gt3-modelexplorer/normal/6bcbc899-51bd-11eb-80d1-005056bbdc38;sP;twebp/porsche-normal.webp',
+    price: '$60/day',
+    brand: 'Porsche',
+  },
+  
+  // Add more items as needed
+];
+
+const columns = 4;
+const containerClass = 'grid grid-cols-1 md:grid-cols-4 gap-4 px-4 md:px-20';
+const panelClass = 'dark:bg-white bg-gray-500 p-4 rounded-md shadow-md';
+const titleClass = 'text-xl font-bold text-white dark:text-black';
+const descriptionClass = 'text-gray-600 mt-2';
+const imageClass = 'w-full h-40 object-cover mb-2';
+const priceClass = 'text-green-500 font-bold text-end';
+const brandClass = 'text-blue-900';
+
+---
+
+<div class={containerClass} id="car-rental-items">
+  {carRentalItems.map(({ id, title, description, imageUrl, price , brand }) => (
+    <div key={id} class={panelClass}>
+      <img src={imageUrl} alt={title} class={imageClass} />
+      <h3 class={titleClass}>{title}</h3>
+      <div class="grid grid-cols-2 gap-4 py-2">
+        <p class={brandClass}>{brand}</p>
+        <p class={priceClass}>{price}</p>
+      </div>
+      <div class="bg-white border dark:bg-black rounded-lg p-2 text-center hover:bg-gray-900">
+        <a href="#">Book Now</a>
+      </div>
+    </div>
+  ))}
+</div>

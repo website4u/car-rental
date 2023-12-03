@@ -1,0 +1,94 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroVideo from '~/components/widgets/HeroVideo.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const metadata = {
+  title: 'Car Rental Services - AstroWind',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <HeroVideo>
+    <Fragment slot="title">Explore with Our Car Rental Services</Fragment>
+    <Fragment slot="subtitle">Experience Comfort, Convenience, and Luxury on the Road</Fragment>
+  </HeroVideo>
+
+  <Note />
+  <Features
+    id="services"
+    tagline="OUR SERVICES"
+    title="Discover Our Car Rental Services"
+    items={[
+      {
+        title: 'Wedding Car Rentals',
+        description: 'Make your special day even more memorable with our luxury wedding car rentals.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'City Tours',
+        description: 'Explore the beauty of the city with our comfortable and stylish rental cars.',
+        icon: 'tabler:map-2',
+      },
+      {
+        title: 'Airport Transfers',
+        description: 'Arrive in style with our reliable airport transfer services.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Flexible Rental Plans',
+        description: 'Choose from our flexible rental plans to suit your travel needs.',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+
+  <Content />
+
+  <Stats
+    stats={[
+      { title: 'Happy Customers', amount: '1.3K' },
+      { title: 'Cars in Fleet', amount: '100+' },
+      { title: 'Rental Hours', amount: '10.3K' },
+      { title: 'Years of Service', amount: '5' },
+    ]}
+  />
+
+  <BlogLatestPosts
+    title="Explore More about Car Rentals in Our Blog"
+    information={`Stay updated with the latest trends in car rentals, travel tips, and exciting destinations.
+      Our blog is your go-to source for valuable information and inspiration.`}
+  />
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Have questions about our car rental services? Find answers here."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'How to Rent a Car?',
+        description: 'Renting a car is easy! Visit our website, choose your car, select rental dates, and make a reservation.',
+      },
+      {
+        title: 'What Documents Do I Need?',
+        description: 'To rent a car, you typically need a valid driver’s license, proof of insurance, and a credit card.',
+      },
+      {
+        title: 'Can I Modify My Reservation?',
+        description: 'Yes, you can modify your reservation online or by contacting our customer service.',
+      },
+      {
+        title: 'Is Insurance Included?',
+        description: 'Basic insurance is often included, but you can opt for additional coverage for extra peace of mind.',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,51 @@
+---
+---
+
+<div class="flex items-center justify-center p-4" id="rent-a-vehicle">
+  <div class="bg-white p-8 rounded-md shadow-md w-full md:w-1/2 dark:text-black opacity-100 z-10">
+    <h2 class="text-2xl font-bold mb-4">Rent a Vehicle</h2>
+
+    <form class="grid grid-cols-2 gap-4">
+      <div class="mb-4 col-span-1">
+        <label for="vehicleType" class="block text-sm font-medium text-gray-600">Vehicle Type</label>
+        <select id="vehicleType" name="vehicleType" class="mt-1 p-2 border rounded-md w-full">
+          <option value="car">Car</option>
+          <option value="truck">Truck</option>
+          <option value="suv">SUV</option>
+        </select>
+      </div>
+
+      <div class="mb-4 col-span-1">
+        <label for="pickupLocation" class="block text-sm font-medium text-gray-600">Pickup Location</label>
+        <input type="text" id="pickupLocation" name="pickupLocation" class="mt-1 p-2 border rounded-md w-full">
+      </div>
+
+      <div class="mb-4 col-span-1">
+        <label for="dropOffLocation" class="block text-sm font-medium text-gray-600">Drop-off Location</label>
+        <input type="text" id="dropOffLocation" name="dropOffLocation" class="mt-1 p-2 border rounded-md w-full">
+      </div>
+
+      <div class="mb-4 col-span-1">
+        <label for="pickupDate" class="block text-sm font-medium text-gray-600">Pickup Date</label>
+        <input type="date" id="pickupDate" name="pickupDate" class="mt-1 p-2 border rounded-md w-full">
+      </div>
+
+      <div class="mb-4 col-span-1">
+        <label for="pickupTime" class="block text-sm font-medium text-gray-600">Pickup Time</label>
+        <input type="time" id="pickupTime" name="pickupTime" class="mt-1 p-2 border rounded-md w-full">
+      </div>
+
+      <div class="mb-4 col-span-1">
+        <label for="withDriver" class="block text-sm font-medium text-gray-600">With Driver?</label>
+        <select id="withDriver" name="withDriver" class="mt-1 p-2 border rounded-md w-full">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <div class="mb-4 col-span-2">
+        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
