@@ -7,6 +7,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'Car Rental Services - AstroWind',
@@ -85,6 +86,27 @@ const metadata = {
       {
         title: 'Is Insurance Included?',
         description: 'Basic insurance is often included, but you can opt for additional coverage for extra peace of mind.',
+      },
+    ]}
+  />
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'Phone',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'contact@support.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        icon: 'tabler:map-pin',
       },
     ]}
   />
