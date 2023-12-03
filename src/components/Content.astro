@@ -50,8 +50,8 @@ const brandClass = 'text-blue-900';
 ---
 
 <div class={containerClass} id="car-rental-items">
-  {carRentalItems.map(({ id, title, description, imageUrl, price , brand }) => (
-    <div key={id} class={panelClass}>
+  {carRentalItems.map(({ title, imageUrl, price , brand }) => (
+    <div class={panelClass}>
       <img src={imageUrl} alt={title} class={imageClass} />
       <h3 class={titleClass}>{title}</h3>
       <div class="grid grid-cols-2 gap-4 py-2">

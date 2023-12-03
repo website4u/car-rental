@@ -1,8 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroVideo from '~/components/widgets/HeroVideo.astro';
+import HeroVideo from '~/components/VideoHero.astro';
 import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
+import Content from '~/components/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -16,10 +16,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <HeroVideo>
-    <Fragment slot="title">Explore with Our Car Rental Services</Fragment>
-    <Fragment slot="subtitle">Experience Comfort, Convenience, and Luxury on the Road</Fragment>
-  </HeroVideo>
+  <HeroVideo />
 
   <Note />
   <Features
